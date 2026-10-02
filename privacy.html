@@ -17,39 +17,52 @@ a{color:var(--c)}
 <body>
 <main>
 <h1>HOPE privacy policy</h1>
-<p>Last updated: 1 October 2026</p>
+<p>Last updated: 2 October 2026</p>
 
 <p>HOPE is a private personal assistant that runs on its owner's own computer and is used only by
 its owner. This policy explains what HOPE does with Google account data.</p>
 
 <h2>What HOPE accesses</h2>
 <p>Only the owner's own Gmail accounts, and only after the owner signs in and agrees on Google's
-consent screen. HOPE asks for read-only access (the <code>gmail.readonly</code> permission), so it
-can read and search email but cannot send, delete, move, label or otherwise change anything.</p>
+consent screen. HOPE asks for Gmail's "modify" permission (<code>gmail.modify</code>): it can read
+and search email, send replies and move messages to Trash. That permission cannot delete
+anything permanently: messages in Trash can be restored for 30 days.</p>
 
 <h2>How the data is used</h2>
-<p>Only to answer the owner's own requests, for example "any unread emails from my energy
-supplier?" or "what does the latest email from work say?". HOPE does not read email in the
-background, build profiles, show advertising, or use email for anything else.</p>
+<ul>
+  <li><strong>Sorting:</strong> about every 30 minutes HOPE looks at new messages in the inbox and
+  sorts them into "needs a reply", "needs action", "needs nothing" and "suspected junk", so the
+  owner sees a short to-do list.</li>
+  <li><strong>Replies:</strong> for messages that need a reply, HOPE drafts one. A draft is only
+  sent when the owner has read it, possibly edited it, and approved sending it.</li>
+  <li><strong>Junk:</strong> suspected junk is listed for the owner, and only the messages the
+  owner selects are moved to Trash. HOPE may show a sender's own unsubscribe link; the owner
+  decides whether to use it.</li>
+  <li><strong>Questions:</strong> HOPE answers the owner's own requests about their email, such as
+  "anything from my energy supplier?".</li>
+</ul>
+<p>Email is never used for advertising, building profiles or anything other than the above.
+Instructions written inside emails are never followed.</p>
 
 <h2>Where the data goes</h2>
 <ul>
-  <li>Email is fetched from Google directly to the owner's computer when the owner asks.</li>
-  <li>To answer, the relevant parts (for example senders, subjects and the text of a message the
-  owner asks about) are sent to the AI language-model service HOPE uses, which is asked not to
-  store or train on it. Nothing else is sent anywhere.</li>
-  <li>Email is not sold, shared with anyone else, or used for advertising.</li>
+  <li>Email is fetched from Google directly to the owner's computer.</li>
+  <li>To sort messages and write drafts, the sender, subject and a short preview of new messages,
+  and the text of messages that need a reply, are sent to the AI language-model services HOPE
+  uses, which are asked not to store or train on it. Nothing else is sent anywhere.</li>
+  <li>Email is not sold, or shared with anyone else.</li>
 </ul>
 
 <h2>What is stored</h2>
-<p>HOPE keeps a Google access token for each connected account, on the owner's computer only, so
-it can keep reading without asking the owner to sign in each time. It does not keep copies of
-emails; recent conversation with the owner may mention them and stays on that computer.</p>
+<p>On the owner's computer only: a Google access token for each connected account, and for each
+sorted message its sender, subject, a one-line summary, any draft reply and what the owner
+decided. Full copies of emails are not kept. The owner's backups of HOPE contain the to-do list
+but never the access tokens.</p>
 
 <h2>Removing access</h2>
 <p>The owner can remove HOPE's access at any time at
 <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>, and can
-delete HOPE's saved tokens from their computer.</p>
+delete HOPE's saved tokens and to-do list from their computer.</p>
 
 <h2>Google API Services User Data Policy</h2>
 <p>HOPE's use and transfer of information received from Google APIs adheres to the
